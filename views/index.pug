@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Random Episode Generator
+    script(src="static/script.js")
+    link(rel="stylesheet",href="static/main.css")
+    link(rel="stylesheet",href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap")
+  body
+    div#id
+      h1 Random Episode Generator
+      h3 Enter a title and receive a random episode
+      input#showNameInput
+      br
+      button#generate(type="button",onclick="getEpisode()") Generate
+      h1#episodenumber
+      p#episodetitle
+
+    

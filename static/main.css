@@ -1,0 +1,44 @@
+h1, h2, h3,h4, p { 
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+#id{
+
+    position: relative;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+#episodetitle{
+    margin-left: 25%;
+    word-wrap: break-word;
+    width: 50%;
+}
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+body{
+    background-color:#181818;
+}
