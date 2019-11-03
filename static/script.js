@@ -20,7 +20,8 @@ function getEpisode(){
                 document.getElementById('episodetitle').innerHTML = showinfo.desc;
              } else {
                 document.getElementById('episodenumber').innerHTML = "Sorry, we weren't able to find that show";
-             }
+                document.getElementById('episodetitle').innerHTML = "";
+            }
          }
     };
     xhttp.open("POST", "/getepisode", true);
