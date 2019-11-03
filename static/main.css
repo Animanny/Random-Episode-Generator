@@ -43,3 +43,12 @@ img{
     border: white;
     border-width: 10px;
 }
+
+#madeby{
+    font-family: 'Yantramanav', sans-serif;
+    margin-top:50px;
+}
+
+a {
+    color:white;
+}
