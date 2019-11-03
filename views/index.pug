@@ -1,8 +1,16 @@
 doctype html
 html
   head
-    title Random Episode Generator
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-151403210-1")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-151403210-1');
     script(src="static/script.js")
+    title Random Episode Generator
     link(rel='shortcut icon', href='static/238565.png')
     link(rel="stylesheet",href="static/main.css")
     link(rel="stylesheet",href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap")
@@ -13,11 +21,11 @@ html
       h3 Enter a title and receive a random episode
       input#showNameInput(onkeydown="search(this)")
       br
-      img#epImage(src="",alt="",height="350",width="622.2222222222")
+      img#epImage(src="",alt="",height="auto",width="622.2222222222")
       h1#episodenumber
       h3#episodetitle
       p#episodedesc
-      p#madeby Made by #[a(href="http://animanny.com") Ani Srikanth] with 📺
+      p#madeby Made with 📺 by #[a(href="http://animanny.com") Ani Srikanth]
         
 
     

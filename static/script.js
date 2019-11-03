@@ -1,5 +1,3 @@
-
-
 function getEpisode(){
     let showname = document.getElementById('showNameInput').value;
 

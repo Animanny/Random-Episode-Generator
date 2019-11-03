@@ -21,6 +21,10 @@ button{
     margin-top:10px;
 }
 
+#madeby:onhover{
+    text-decoration: none;
+}
+
 input {
     color:white;
     border-style:solid;
@@ -43,15 +47,21 @@ body{
 
 img{
     margin-top: 25px;
-    border: white;
-    border-width: 10px;
 }
 
 #madeby{
+    color: white !important;
     font-family: 'Yantramanav', sans-serif;
     margin-top:50px;
 }
 
 a {
     color:white;
+    text-decoration: underline;
+    transition: text-decoration 1s;
+    -webkit-transition: text-decorations 2s; 
+}
+
+a:hover{
+    text-decoration: none;
 }
