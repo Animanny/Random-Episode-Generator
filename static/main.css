@@ -17,24 +17,21 @@ h1, h2, h3,h4, p {
     width: 50%;
 }
 
-input[type=text] {
-    padding:5px; 
-    border:2px solid #ccc; 
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+button{
+    margin-top:10px;
 }
 
-input[type=text]:focus {
-    border-color:#333;
-}
+input {
+    color:white;
+    border-style:solid;
+    border-color: white;
+    height: 50px;
+    width:350px;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
 
-input[type=submit] {
-    padding:5px 15px; 
-    background:#ccc; 
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
+    background: #181818;
 }
 
 body{
