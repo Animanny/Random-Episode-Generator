@@ -15,11 +15,21 @@ function getEpisode(){
          if (this.readyState == 4 && this.status == 200) {
              //alert(this.responseText);
              showinfo = JSON.parse(this.responseText);
-             document.getElementById('episodenumber').innerHTML = "Season: "+showinfo.season+" Episode: "+showinfo.episode;
-             document.getElementById('episodetitle').innerHTML = showinfo.desc;
+             if(showinfo.season != undefined){
+                document.getElementById('episodenumber').innerHTML = "Season: "+showinfo.season+" Episode: "+showinfo.episode;
+                document.getElementById('episodetitle').innerHTML = showinfo.desc;
+             } else {
+                document.getElementById('episodenumber').innerHTML = "Sorry, we weren't able to find that show";
+             }
          }
     };
     xhttp.open("POST", "/getepisode", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(episode));
+}
+
+function search(ele) {
+    if(event.key === 'Enter') {
+        getEpisode();        
+    }
 }

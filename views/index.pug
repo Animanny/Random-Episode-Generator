@@ -9,9 +9,9 @@ html
     div#id
       h1 Random Episode Generator
       h3 Enter a title and receive a random episode
-      input#showNameInput
+      input#showNameInput(placeholder="Show Title",onkeydown="search(this)")
       br
-      button#generate(type="button",onclick="getEpisode()") Generate
+      button#generate(placeholder="Show Title",type="button",onclick="getEpisode()") Generate
       h1#episodenumber
       p#episodetitle
 

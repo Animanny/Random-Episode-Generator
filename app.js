@@ -22,22 +22,27 @@ app.post('/getepisode',(req,res)=>{
   var show_id; //DEFINING THE ID
   movieDatabase('https://api.themoviedb.org/3/search/tv?api_key=34bbe0517e6d8f59540de923df8952bc&query='+req.body.show+'&page=1', { json: false }, (err, response, body) => {
       if (err) { return console.log(err); }
+      try{
       results = JSON.parse(body);
       show_id = results.results[0].id;
-      console.log(show_id);
+      console.log();
+      } catch(error){}
     movieDatabase('https://api.themoviedb.org/3/tv/'+show_id+'?api_key=34bbe0517e6d8f59540de923df8952bc&language=en-US', { json: false }, (err, response, body) => {
       if (err) { return console.log(err); }
-      results = JSON.parse(body);
-      season = Math.round(Math.random() * results.number_of_seasons);
-      episode = Math.round(Math.random() * results.seasons[season-1].episode_count);
+      try{
+        results = JSON.parse(body);
+        console.log(results.name);
+        season = Math.floor(Math.random() * results.number_of_seasons)+1;
+        episode = Math.floor(Math.random() * results.seasons[season-1].episode_count)+1;
+      } catch(error){};
       movieDatabase('https://api.themoviedb.org/3/tv/'+show_id+'/season/'+season+'/episode/'+episode+'?api_key=34bbe0517e6d8f59540de923df8952bc&language=en-US', { json: false }, (err, response, body) => {
         if (err) { return console.log(err); }
+        try{
         results = JSON.parse(body);
         episode_title = results.name;
         episode_description = results.overview;
         poster = results.still_path;
-        console.log("Season: "+season+" Episode: "+episode);
-
+        } catch(error){}
         ep_data = {
           "season":season,
           "episode":episode,
