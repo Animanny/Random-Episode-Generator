@@ -19,7 +19,7 @@ function getEpisode(){
              document.getElementById('episodetitle').innerHTML = showinfo.desc;
          }
     };
-    xhttp.open("POST", "https://randomepisodegenerator.herokuapp.com/getepisode", true);
+    xhttp.open("POST", "/getepisode", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(episode));
 }
