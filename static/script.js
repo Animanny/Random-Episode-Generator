@@ -15,12 +15,21 @@ function getEpisode(){
          if (this.readyState == 4 && this.status == 200) {
              //alert(this.responseText);
              showinfo = JSON.parse(this.responseText);
-             if(showinfo.season != undefined){
+             if(showinfo.season != undefined && showinfo.episode != undefined){
                 document.getElementById('episodenumber').innerHTML = "Season: "+showinfo.season+" Episode: "+showinfo.episode;
-                document.getElementById('episodetitle').innerHTML = showinfo.desc;
+                if(showinfo.desc != undefined){
+                    document.getElementById('episodedesc').innerHTML = showinfo.desc;
+                    if(showinfo.title != undefined){
+                        document.getElementById('episodetitle').innerHTML = showinfo.title;
+                    } else {
+                    }
+                }else{
+                    document.getElementById('episodedesc').innerHTML = "Decription not available."
+                }
              } else {
                 document.getElementById('episodenumber').innerHTML = "Sorry, we weren't able to find that show";
                 document.getElementById('episodetitle').innerHTML = "";
+                document.getElementById('episodedesc').innerHTML = "";
             }
          }
     };

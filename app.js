@@ -40,6 +40,7 @@ app.post('/getepisode',(req,res)=>{
         try{
         results = JSON.parse(body);
         episode_title = results.name;
+        console.log("Title: "+episode_title)
         episode_description = results.overview;
         poster = results.still_path;
         } catch(error){}
@@ -47,7 +48,8 @@ app.post('/getepisode',(req,res)=>{
           "season":season,
           "episode":episode,
           "desc":episode_description,
-          "poster":poster
+          "poster":poster,
+          "title":episode_title
         }
         res.send(ep_data);
 
