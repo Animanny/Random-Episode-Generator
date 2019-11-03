@@ -27,7 +27,7 @@ input {
     border-color: white;
     height: 50px;
     width:350px;
-    border-radius: 4px;
+    border-radius: 10px;
     font-family: 'Open Sans', sans-serif;
     font-size: 25px;
 
@@ -36,4 +36,10 @@ input {
 
 body{
     background-color:#181818;
+}
+
+img{
+    margin-top: 25px;
+    border: white;
+    border-width: 10px;
 }

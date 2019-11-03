@@ -21,7 +21,13 @@ function getEpisode(){
                     document.getElementById('episodedesc').innerHTML = showinfo.desc;
                     if(showinfo.title != undefined){
                         document.getElementById('episodetitle').innerHTML = showinfo.title;
+                        if(showinfo.poster != undefined){
+                            document.getElementById('epImage').src = "https://image.tmdb.org/t/p/original"+showinfo.poster;
+                        } else {
+                            document.getElementById('epImage').src ="";
+                        }
                     } else {
+                        document.getElementById('episodetitle').innerHTML = ""
                     }
                 }else{
                     document.getElementById('episodedesc').innerHTML = "Decription not available."
@@ -30,6 +36,8 @@ function getEpisode(){
                 document.getElementById('episodenumber').innerHTML = "Sorry, we weren't able to find that show";
                 document.getElementById('episodetitle').innerHTML = "";
                 document.getElementById('episodedesc').innerHTML = "";
+                document.getElementById('epImage').src ="";
+
             }
          }
     };
