@@ -35,6 +35,7 @@ input {
     font-family: 'Open Sans', sans-serif;
     font-size: 25px;
     background: #181818;
+    padding-left: 15px;
 }
 
 input:focus {
@@ -48,6 +49,10 @@ body{
 img{
     margin-top: 25px;
 }
+
+img[src=""] {
+    display: none;
+ }
 
 #madeby{
     color: white !important;
