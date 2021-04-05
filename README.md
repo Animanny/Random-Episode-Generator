@@ -3,7 +3,7 @@ so you you wanna watch an old classic but there's so many episodes and you've se
 so you wanna just pick one at random, but there's no feature for that.
 ## until now.
 
-i made this after doing poorly on a midterm :) [Enjoy](https://randomepisodegenerator.herokuapp.com/)
+i made this after doing poorly on a midterm :) [Enjoy](https://randomepisodegenerator.animanny.com/)
 
 ![Main Screen](https://i.imgur.com/Em5DkY0.png)
 
